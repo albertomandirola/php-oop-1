@@ -1,29 +1,9 @@
 <?php
-class Movie{
-    public $title;
-    public $year;
-    public $author;
-    public $genres;
-    public $poster;
+require __DIR__.'/Models/Movie.php';
 
-    function __construct($_title, $_genres, $_year)
-    {
-        $this->title = $_title;
-        $this->genres = $_genres;
-        $this->year = $_year;
-    }
-    public function getAge()
-    {
-        $currentYear = 2024;
-        return $currentYear - $this->year;
-    }
+$movie_1 = new Movie("Il Castello Errante Di Howl", ["Cinema fantastico", "Avventura" ], 2004,"Hayao Miyazaki");
+$movie_2 = new Movie("Your Name",  ["Cinema fantastico", "Romantico" ], 2016,"Makoto Shinkai");
 
-}
-$movie_1 = new Movie("Il Castello Errante Di Howl", ["Cinema fantastico", "Avventura" ], 2004);
-$movie_2 = new Movie("Your Name",  ["Cinema fantastico", "Romantico" ], 2016);
-
-$movie_1->author = "Hayao Miyazaki";
-$movie_2->author = "Makoto Shinkai";
 
 $movie_1->poster = "https://pad.mymovies.it/filmclub/2016/10/099/locandina.jpg";
 $movie_2->poster = "https://pad.mymovies.it/filmclub/2004/08/005/locandina.jpg";
